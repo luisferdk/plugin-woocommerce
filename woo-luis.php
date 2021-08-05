@@ -137,10 +137,10 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
     $gender = get_post_meta($product->get_id(), 'gender', true);
     $gender = $gender ? $gender : "";
     echo "
-    <input id='gender' name='gender' value='$gender' type='text' />
-    <input id='movie_id' name='movie_id' value='' type='text' />
-    <input id='movie_title' name='movie_title' value='' type='text' />
-    <input id='movie_image' name='movie_image' value='' type='text' />
+    <input id='gender' name='gender' value='$gender' type='hidden' />
+    <input id='movie_id' name='movie_id' value='' type='hidden' />
+    <input id='movie_title' name='movie_title' value='' type='hidden' />
+    <input id='movie_image' name='movie_image' value='' type='hidden' />
     ";
   }
   add_action('woocommerce_before_add_to_cart_button', 'my_before_add_to_cart_button');
