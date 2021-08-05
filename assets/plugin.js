@@ -27,10 +27,12 @@
             $('#movie_id')[0].value = ''
             $('#movie_title')[0].value = ''
             $('#movie_image')[0].value = ''
+            $('.woocommerce-error').show();
           }
           else {
             $('.add-movie').removeClass('active')
             $(this).addClass('active')
+            $('.woocommerce-error').hide();
             $('#movie_id')[0].value = $(this).data('id')
             $('#movie_title')[0].value = $(this).data('title')
             $('#movie_image')[0].value = $(this).data('image')
